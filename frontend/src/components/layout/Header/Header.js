@@ -6,6 +6,7 @@ import "./Header.css";
 const options = {
   burgerColorHover: "#eb4034",
   logo,
+  burgerColor: "#00ff00",
   logoWidth: "10vmax",
   navColor1: "white",
   logoHoverSize: "10px",
