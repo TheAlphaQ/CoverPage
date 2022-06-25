@@ -4,7 +4,7 @@ import { CgMouse } from "react-icons/cg";
 
 const Home = () => {
   return (
-    <>
+    <div>
       <div className="banner">
         <p>Welcome to Ecommerce</p>
         <h1>FIND AMAZING PRODUCTS BELOW</h1>
@@ -15,7 +15,7 @@ const Home = () => {
           </button>
         </a>
       </div>
-    </>
+    </div>
   );
 };
 

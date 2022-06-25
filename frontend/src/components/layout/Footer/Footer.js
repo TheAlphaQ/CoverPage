@@ -8,14 +8,14 @@ const Footer = () => {
         <h4>DOWNLOAD OUR APP</h4>
         <p>Availabe both for Android and iOS devices</p>
 
-        <div className="row">
-          <div className="col-6">
+        <div>
+          <div>
             <img
               src={"https://cdn-icons-png.flaticon.com/512/300/300218.png"}
               alt="playstore"
             />
           </div>
-          <div className="col-6">
+          <div>
             <img
               src={"https://cdn-icons-png.flaticon.com/512/831/831276.png"}
               alt="Appstore"
