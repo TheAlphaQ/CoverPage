@@ -1,3 +1,7 @@
+#footerSVG {
+  transform: translateY(5px);
+}
+
 footer {
   padding: 2vmax;
   background-color: rgb(34, 33, 33);
