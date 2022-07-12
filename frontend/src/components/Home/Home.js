@@ -29,7 +29,7 @@ const Home = () => {
   return (
     <>
       {loading ? (
-        <Loader />
+        <Loader /> //Loads the loader when page is loading.
       ) : (
         <div className="homeSection">
           <MetaData title="Home" />
