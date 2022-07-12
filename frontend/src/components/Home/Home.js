@@ -6,15 +6,11 @@ import Rellax from "rellax";
 import { getProduct } from "../../actions/productAction";
 import { useSelector, useDispatch } from "react-redux";
 
-const product = {
-  name: "The Dresden Files",
-  images: [{ url: "https://i.imgur.com/broLZqb.jpeg" }],
-  price: "150",
-  _id: "dresdenFiles",
-};
-
 const Home = () => {
   const dispatch = useDispatch();
+  const { loading, error, products, productsCount } = useSelector(
+    (state) => state.products
+  );
 
   useEffect(() => {
     new Rellax(".rellax"); // <---- Via class name
@@ -41,14 +37,7 @@ const Home = () => {
       </h2>
 
       <div className="container" id="container">
-        <Product product={product} />
-        <Product product={product} />
-        <Product product={product} />
-        <Product product={product} />
-        <Product product={product} />
-        <Product product={product} />
-        <Product product={product} />
-        <Product product={product} />
+        {products && products.map((product) => <Product product={product} />)}
       </div>
     </div>
   );
