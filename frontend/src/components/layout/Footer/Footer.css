@@ -41,8 +41,17 @@ img {
 .midFooter > h1 {
   font-size: 4vmax;
   font-family: "Roboto";
+}
+
+.midFooter > h1 > a:link,
+.midFooter > h1 > a:visited {
   color: #eb4034;
 }
+
+.midFooter > h1 > a:active {
+  color: aliceblue;
+}
+
 .midFooter > p {
   max-width: 60%;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;

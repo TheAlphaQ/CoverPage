@@ -24,7 +24,7 @@ const Home = () => {
       return alert.error(error);
     }
     dispatch(getProduct());
-  }, [dispatch, error]);
+  }, [dispatch, error, alert]);
 
   return (
     <>
@@ -32,7 +32,7 @@ const Home = () => {
         <Loader /> //Loads the loader when page is loading.
       ) : (
         <div className="homeSection">
-          <MetaData title="Home" />
+          <MetaData title="CoverPage" />
           <div className="banner">
             <h1 className="rellax" data-rellax-speed="-1">
               Welcome to CoverPage

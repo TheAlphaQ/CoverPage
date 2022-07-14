@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -37,16 +38,39 @@ const Footer = () => {
         </div>
 
         <div className="midFooter">
-          <h1>CoverPage</h1>
+          <h1>
+            <Link to="/" style={{ textDecoration: "None" }}>
+              CoverPage
+            </Link>
+          </h1>
 
           <p>Copyrights 2022 &copy; junkEmpire & Co.</p>
         </div>
 
         <div className="rightFooter">
           <h4>Follow Us</h4>
-          <a href="http://instagram.com/">Instagram</a>
-          <a href="http://youtube.com/">YouTube</a>
-          <a href="http://github.com/">GitHub</a>
+          <Link
+            style={{ textDecoration: "none" }}
+            to={{
+              pathname: "http://instagram.com/",
+            }}
+          >
+            Instagram
+          </Link>
+          <Link
+            style={{ textDecoration: "none" }}
+            to={{
+              pathname: "http://youtube.com/",
+            }}
+          >
+            YouTube
+          </Link>
+          <Link
+            style={{ textDecoration: "none" }}
+            to={{ pathname: "http://github.com/" }}
+          >
+            GitHub
+          </Link>
         </div>
       </footer>
     </>
