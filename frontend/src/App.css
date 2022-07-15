@@ -2,3 +2,8 @@
   margin: 0;
   scroll-behavior: smooth;
 }
+
+/* Overriding CSS for overlay-navbar */
+.menuBurger {
+  height: 4.3vmax !important;
+}
