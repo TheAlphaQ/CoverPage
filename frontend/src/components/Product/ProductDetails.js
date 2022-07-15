@@ -1,14 +1,20 @@
-import React, { useEffect } from "react";
-import Carousel from "react-material-ui-carousel";
+import React, { useEffect, useState } from "react";
 import "./ProductDetails.css";
 import { useSelector, useDispatch } from "react-redux";
 import { getProductDetails } from "../../actions/productAction";
 import { useParams } from "react-router-dom";
 import { Rating } from "@mui/material";
+import Carousel from "react-bootstrap/Carousel";
 
 const ProductDetails = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
+
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
 
   const { product, loading, error } = useSelector(
     (state) => state.productDetails
@@ -29,17 +35,52 @@ const ProductDetails = () => {
     <>
       <div className="ProductDetails">
         <div>
-          <Carousel>
-            {product.images &&
-              product.images.map((item, i) => (
-                <img
-                  className="CarouselImage"
-                  key={item.url}
-                  src={item.url}
-                  alt={`${i} Slide`}
-                />
-                // <p>Lund</p>
-              ))}
+          <Carousel
+            activeIndex={index}
+            onSelect={handleSelect}
+            // fade
+            // variant="alert"
+          >
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="https://i.imgur.com/Z8OJAoR.jpg"
+                alt="First slide"
+              />
+              <Carousel.Caption>
+                <h3>First slide label</h3>
+                <p>
+                  Nulla vitae elit libero, a pharetra augue mollis interdum.
+                </p>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="https://i.imgur.com/AtLEEC3.jpeg"
+                alt="Second slide"
+              />
+
+              <Carousel.Caption>
+                <h3>Second slide label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="https://i.imgur.com/vHLw37M.gif"
+                alt="Third slide"
+              />
+
+              <Carousel.Caption>
+                <h3>Third slide label</h3>
+                <p>
+                  Praesent commodo cursus magna, vel scelerisque nisl
+                  consectetur.
+                </p>
+              </Carousel.Caption>
+            </Carousel.Item>
           </Carousel>
         </div>
         <div>
