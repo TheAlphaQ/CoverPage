@@ -1,5 +1,6 @@
 .banner {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1067%26quot%3b)' fill='none'%3e%3crect width='1920' height='1080' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M 0%2c35 C 96%2c145.8 288%2c501.6 480%2c589 C 672%2c676.4 768%2c388.8 960%2c472 C 1152%2c555.2 1248%2c1087.4 1440%2c1005 C 1632%2c922.6 1824%2c249 1920%2c60L1920 1080L0 1080z' fill='%23184a7e'%3e%3c/path%3e%3cpath d='M 0%2c86 C 48%2c263.6 144%2c883.8 240%2c974 C 336%2c1064.2 384%2c599.8 480%2c537 C 576%2c474.2 624%2c688.8 720%2c660 C 816%2c631.2 864%2c408 960%2c393 C 1056%2c378 1104%2c628.8 1200%2c585 C 1296%2c541.2 1344%2c123.8 1440%2c174 C 1536%2c224.2 1584%2c828.2 1680%2c836 C 1776%2c843.8 1872%2c337.6 1920%2c213L1920 1080L0 1080z' fill='%232264ab'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1067'%3e%3crect width='1920' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1067%26quot%3b)' fill='none'%3e%3crect width='1920' height='1080' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M 0%2c35 C 96%2c145.8 288%2c501.6 480%2c589 C 672%2c676.4 768%2c388.8 960%2c472 C 1152%2c555.2 1248%2c1087.4 1440%2c1005 C 1632%2c922.6 1824%2c249 1920%2c60L1920 1080L0 1080z' fill='%23184a7e'%3e%3c/path%3e%3cpath d='M 0%2c86 C 48%2c263.6 144%2c883.8 240%2c974 C 336%2c1064.2 384%2c599.8 480%2c537 C 576%2c474.2 624%2c688.8 720%2c660 C 816%2c631.2 864%2c408 960%2c393 C 1056%2c378 1104%2c628.8 1200%2c585 C 1296%2c541.2 1344%2c123.8 1440%2c174 C 1536%2c224.2 1584%2c828.2 1680%2c836 C 1776%2c843.8 1872%2c337.6 1920%2c213L1920 1080L0 1080z' fill='%232264ab'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1067'%3e%3crect width='1920' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e"); */
+  background-image: url(../../images/patternpad.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,19 +10,21 @@
   text-align: center;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
 }
 
-.banner > h3 {
+.bannerH3 {
+  color: #ffffff;
   font-family: "Roboto";
   margin-bottom: 3em;
+  padding: 0.8rem;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .banner > h1 {
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.9);
   margin-bottom: 5vmax;
-
-  font: 900 2.5vmax "Roboto";
-  font-size: 4.25em;
 }
 
 .banner > p {
@@ -58,8 +61,6 @@
 
 .homeHeading {
   text-align: center;
-  font-family: Roboto;
-  font-size: 1.5rem;
   border-bottom: 1px solid rgba(21, 21, 21, 0.5);
   width: 20vmax;
   padding: 1vmax;
@@ -67,7 +68,7 @@
   color: rgb(0, 0, 0, 0.7);
 }
 
-.container {
+.productContainer {
   display: flex;
   margin: 2vmax auto;
   width: 80vw;
@@ -101,7 +102,7 @@
 
 .productCardSpan {
   margin: 0.5vmax;
-  font: 300 0.7vmax "Roboto";
+  font: 300 0.85vmax "Roboto";
 }
 
 .productCard > p {

@@ -28,16 +28,19 @@ const Home = () => {
       ) : (
         <div className="homeSection">
           <MetaData title="CoverPage" />
+
           <div className="banner">
-            <h1>Welcome to CoverPage</h1>
-            <h3>The bookstore that reads you while you read them.</h3>
+            <h1 className="fs-1">Welcome to CoverPage.</h1>
+            <h4 className="bannerH3">
+              The bookstore that reads you while you read them.
+            </h4>
           </div>
 
-          <h2 id="homeHeading" className="homeHeading">
+          <h4 id="homeHeading" className="homeHeading">
             Give them a read!
-          </h2>
+          </h4>
 
-          <div className="container" id="container">
+          <div className="productContainer">
             {products &&
               products.map((product) => <Product product={product} />)}
           </div>

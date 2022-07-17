@@ -18,9 +18,11 @@ const Product = ({ product }) => {
 
       <div>
         <ReactStars {...options} />{" "}
-        <span>({product.numOfReviews} Reviews)</span>
+        <span className="productCardSpan">
+          ({product.numOfReviews} Reviews)
+        </span>
       </div>
-      <span>`${product.price}/00`</span>
+      <span>${product.price}/00</span>
     </Link>
   );
 };

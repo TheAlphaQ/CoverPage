@@ -7,7 +7,7 @@
   display: flex;
 }
 
-.ProductDetails > div {
+/* .ProductDetails > div {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -15,15 +15,16 @@
   align-items: center;
   padding: 2vmax;
   box-sizing: border-box;
-  border: 1px solid white;
-}
+} */
 
-.ProductDetails > div:last-child {
+/* .ProductDetails > div:last-child {
   align-items: flex-start;
-}
+} */
 
 .CarouselImage {
-  width: auto;
+  width: 300px;
+  height: 480px;
+  /* 1600 x 2560 */
 }
 
 .detailsBlock-1 > h2 {

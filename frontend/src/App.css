@@ -7,3 +7,8 @@
 .menuBurger {
   height: 4.3vmax !important;
 }
+
+.justify-text {
+  text-align: justify;
+  text-justify: inter-word;
+}

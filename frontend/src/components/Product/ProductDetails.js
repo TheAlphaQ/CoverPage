@@ -33,92 +33,65 @@ const ProductDetails = () => {
 
   return (
     <>
-      <div className="ProductDetails">
-        <div>
-          <Carousel
-            activeIndex={index}
-            onSelect={handleSelect}
-            // fade
-            // variant="alert"
-          >
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="https://i.imgur.com/Z8OJAoR.jpg"
-                alt="First slide"
-              />
-              <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>
-                  Nulla vitae elit libero, a pharetra augue mollis interdum.
-                </p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="https://i.imgur.com/AtLEEC3.jpeg"
-                alt="Second slide"
-              />
-
-              <Carousel.Caption>
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="https://i.imgur.com/vHLw37M.gif"
-                alt="Third slide"
-              />
-
-              <Carousel.Caption>
-                <h3>Third slide label</h3>
-                <p>
-                  Praesent commodo cursus magna, vel scelerisque nisl
-                  consectetur.
-                </p>
-              </Carousel.Caption>
-            </Carousel.Item>
-          </Carousel>
-        </div>
-        <div>
-          <div className="detailsBlock-1">
-            <h2>{product.name}</h2>
-            <p>Product # {product._id}</p>
+      <div className="ProductDetails container-fluid">
+        <div className="row mx-5">
+          <div className="col-5">
+            <Carousel
+              activeIndex={index}
+              onSelect={handleSelect}
+              // fade
+              variant="dark"
+            >
+              {product.images &&
+                product.images.map((item, i) => (
+                  <Carousel.Item key={item.url}>
+                    <img
+                      className="d-block CarouselImage mx-auto"
+                      src={item.url}
+                      alt={`${i} Slide`}
+                    />
+                  </Carousel.Item>
+                ))}
+            </Carousel>
           </div>
-          <div className="detailsBlock-2">
-            <Rating {...options} />
-            <span className="detailsBlock-2-span">
-              {" "}
-              ({product.numOfReviews} Reviews)
-            </span>
-          </div>
-          <div className="detailsBlock-3">
-            <h1>{`₹${product.price}`}</h1>
-            <div className="detailsBlock-3-1">
-              <div className="detailsBlock-3-1-1">
-                <button>-</button>
-                <input readOnly type="number" value="1" />
-                <button>+</button>
+          <div className="col-7">
+            <div className="detailsBlock-1">
+              <h2>{product.name}</h2>
+              <p>Product # {product._id}</p>
+            </div>
+            <div className="detailsBlock-2">
+              <Rating {...options} />
+              <span className="detailsBlock-2-span">
+                {" "}
+                ({product.numOfReviews} Reviews)
+              </span>
+            </div>
+            <div className="detailsBlock-3">
+              <h1>{`₹${product.price}`}</h1>
+              <div className="detailsBlock-3-1">
+                <div className="detailsBlock-3-1-1">
+                  <button>-</button>
+                  <input readOnly type="number" value="1" />
+                  <button>+</button>
+                </div>
+                <button>Add to Cart</button>
               </div>
-              <button>Add to Cart</button>
+
+              <p>
+                Status:
+                <b className={product.Stock < 1 ? "redColor" : "greenColor"}>
+                  {product.Stock < 1 ? "OutOfStock" : "InStock"}
+                </b>
+              </p>
             </div>
 
-            <p>
-              Status:
-              <b className={product.Stock < 1 ? "redColor" : "greenColor"}>
-                {product.Stock < 1 ? "OutOfStock" : "InStock"}
-              </b>
-            </p>
-          </div>
+            <div className="detailsBlock-4">
+              Description :{" "}
+              <p className="justify-text">{product.description}</p>
+            </div>
 
-          <div className="detailsBlock-4">
-            Description : <p>{product.description}</p>
+            <button className="submitReview">Submit Review</button>
           </div>
-
-          <button className="submitReview">Submit Review</button>
         </div>
       </div>
     </>
